@@ -1,2 +1,2 @@
 # cjarges-apple-theme
-Apple theme for Cjarges
+Liferay 6.1.1 Apple theme for Cjarges
