@@ -1,0 +1,84 @@
+<!-- FOOTER -->
+	<footer>
+		<div class="container-fluid grey_content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+					
+						$theme.runtime("1_WAR_webformportlet_INSTANCE_Cq3iqVOyGjvN")
+						
+					</div>
+					<div class="col-md-1 col-sm-0 col-xs-0"></div>
+
+					<div class="col-md-3">
+						<div class="clearfix"></div>
+						<div class="col-md-12 col-sm-6 col-xs-6">
+							<h2>Ne găsești și aici</h2>
+							<div class="social_block">
+								<a href="https://ro-ro.facebook.com/CJArges" target="_blank" title="Facebook">
+									<img class="grayscale" src="$images_folder/fb_icon.png" alt="facebook">
+								</a>
+								<a href="https://twitter.com/ProARGES/status/170270417435623424" blank" title="Twitter" >
+									<img class="grayscale" src="$images_folder/twt_icon.png" alt="twitter">
+								</a>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-6 col-xs-6">
+						
+							<!-- BOTTOM_BLOCK_LINKURI_RAPIDE -->
+						
+							#set ($VOID = $velocityPortletPreferences.setValue('groupId', $themeDisplay.getScopeGroupId().toString()))
+							#set ($VOID = $velocityPortletPreferences.setValue('articleId', 'BOTTOM_BLOCK_LINKURI_RAPIDE'))
+							#set ($VOID = $velocityPortletPreferences.setValue('portletSetupShowBorders', 'false'))
+							#set ($portlet_id = '56')
+							#set ($my_portlet_id = "${portlet_id}_INSTANCE_12345")
+							$theme.runtime($my_portlet_id, "", $velocityPortletPreferences.toString())
+							$velocityPortletPreferences.reset()
+							
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="blue_panel">
+
+							<a class="" href="$company_url" title="#language ("go-to") $site_name">
+								<img alt="$logo_description" height="$site_logo_height" src="$company_logo" width="$site_logo_width" />
+							</a>
+							
+							<p class="title">$site_name</p>
+							<hr />
+							<p style="text-align: left;">
+								<strong>ADRESA:</strong> $address, Cod Postal:
+								$zip, $city, $country
+							</p>
+							<p style="text-align: left; margin-top: 10px;">
+								<strong>TEL:</strong> $phone_extension/$phone
+							</p>
+							<p style="text-align: left; margin-top: 10px;">
+								<strong>FAX:</strong> $fax_extension/$fax
+							</p>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid white_content bottom_footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<a href="/acasa">Acasă</a> | 
+						<a href="/judetul-arges">Județul Argeș</a> | 
+						<a href="/consiliul-judetean-arges">Consiliul Județean</a> | 
+						<a href="/institutii-publice-subordonate">Instituții Subordonate</a> | 
+						<a href="/servicii-online">Servicii Online</a> | 
+						<a href="/contact">Contact</a>
+					</div>
+					<div class="col-md-6">
+						<p style="float:right">Copyright &copy; 2014 $site_name</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	$theme.include($top_head_include)
+
+	<link rel="icon" href="$images_folder/favicon.ico" rel="SHORTCUT ICON">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Ara Software">
+	<meta name="description" content="Bine ati venit la Consiliul Judetean Arges. Cj Arges, Evenimente, Comunicate de presa, Institutii">
+	
+	<META NAME="ROBOTS" CONTENT="ALL,NOTRANSLATE"> 
+	<meta property="og:title" content="Consiliul Judetean Arges">
+	<meta property="og:image" content="https://www.cjarges.ro$site_logo">
+	<meta property="og:description" content="Consiliul Judetean, Arges, Pitesti">
+
+    <!-- Bootstrap core CSS -->
+	<link href="$css_folder/bootstrap.min.css" rel="stylesheet">
+	<link href="$css_folder/font-awesome.min.css" rel="stylesheet">
+	
+	<script src="$javascript_folder/ie-emulation-modes-warning.js"></script>
+	
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="$javascript_folder/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Custom styles for this template -->
+	<link href="$css_folder/carousel.css" rel="stylesheet">
+
+	<link rel='stylesheet' href='$css_folder/jquery.smartModal.css'>
+
+	#if ($theme.getSetting("template-type") == "organigrama")
+	    
+	    <link rel="stylesheet" type="text/css" href="$javascript_folder/organigrama/jquery/ui-lightness/jquery-ui-1.10.2.custom.css" />
+        <link rel="stylesheet" type="text/css" href="$css_folder/organigrama/primitives.latest.css" media="screen"  />
+
+        <script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-ui-1.10.2.custom.min.js"></script>
+        <script type="text/javascript" src="http://www.cjarges.ro:8080/organigrama/demo/js/primitives.min.js"></script>
+
+        <script type="text/javascript" src="http://www.cjarges.ro:8080/organigrama/diagram.js"></script>
+
+	#else
+		
+		<script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-ui-1.10.2.custom.min.js"></script>
+	
+	#end
+	
+	<!-- Custom styles for DateTime Picker -->
+	<link href="$css_folder/bootstrap-datetimepicker.css" rel="stylesheet">
+	
+	<script src='$javascript_folder/jquery.smartModal.js'></script>
+	<script src='$javascript_folder/jquery.cookie.js'></script>
+	
+	<!-- cookie enabled site warning -->
+	<script type="text/javascript">
+    	window.cookieconsent_options = {
+    	"message":"Acest site foloseste cookie-uri. Prin utilizarea si navigarea in continuare pe site-ul www.cjarges.ro, va exprimati acordul expres pentru folosirea informatilor stocate.",
+    	"dismiss":"Accept",
+    	"learnMore":"Detalii",
+    	"link":"http://www.cjarges.ro/ro/despre-cookie","theme":"light-top"};
+	</script>
+
+
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+	
+	<!-- Google Captcha -->
+	<script src='https://www.google.com/recaptcha/api.js?hl=ro'></script>
+
+</head>
+
+<body>
+
+	$theme.include($body_top_include)
+	
+	#if ($is_signed_in)
+		#dockbar()
+	#end
+
+
+	<!-- HEADER -->
+	#parse ("$full_templates_path/header.vm")
+	
+	<!-- BODY  # breadcrumbs() -->
+
+		
+			#if ($selectable)
+				$theme.include($content_include)
+			#else
+				$portletDisplay.recycle()
+	
+				$portletDisplay.setTitle($the_title)
+	
+				$theme.wrapPortlet("portlet.vm", $content_include)
+			#end
+	
+	#if($theme.getSetting("template-type") == "organigrama")
+	
+		#set($layoutLocalServiceUtil = $serviceLocator.findService("com.liferay.portal.service.LayoutLocalService"))
+		#set($topPublicLayouts = $layoutLocalServiceUtil.getLayouts($layout.getGroupId(),false))
+	
+		<div class="container-fluid white_content big_padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-4">
+						<div class="col-md-12">
+						
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	#end
+
+
+	<!-- FOOTER -->
+	#parse ("$full_templates_path/footer.vm")
+
+
+	$theme.include($body_bottom_include)
+
+	$theme.include($bottom_include)
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	
+	#if ($theme.getSetting("template-type") == "organigrama")
+		
+	#else
+	
+		<script src="$javascript_folder/bootstrap.min.js"></script>
+		<script src="$javascript_folder/moment.min.js"></script>	
+		<script src="$javascript_folder/moment.ro.js"></script>
+		<script src="$javascript_folder/bootstrap-datetimepicker.js"></script>
+		
+	
+	#end
+	
+	<script src="$javascript_folder/start_modal.js"></script>
+	
+	
+	<!-- JS for closing/opening search-->
+	
+	<script>
+		$('html').click(function() {
+			closeSearchBox();
+		});
+	
+		$('#loupe').click(function(event){
+		    event.stopPropagation();
+		});
+		$('#search-outer').click(function(event){
+		    event.stopPropagation();
+		});
+		
+		function realWidth(obj){
+		    var clone = obj.clone();
+		    clone.css("visibility","hidden");
+		    $('body').append(clone);
+		    var width = clone.outerWidth();
+		    clone.remove();
+		    return width;
+		}
+		
+		$(function(){
+			$('.carousel-inner img').each(function(){
+				poz = ($('.carousel-inner').width() - realWidth($(this))) / 2;
+				$(this).css('left', poz + 'px');
+			});
+		});
+		
+		$(window).resize(function(){
+			$('.carousel-inner img').each(function(){
+				poz = ($('.carousel-inner').width() - realWidth($(this))) / 2;
+				$(this).css('left', poz + 'px');
+			});
+		});
+	</script>
+	
+</body>
+
+</html>

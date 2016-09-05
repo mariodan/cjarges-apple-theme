@@ -1,0 +1,107 @@
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+ol, ul, dl {
+  margin-left: 0em; }
+
+blockquote, ul, ol, dl {
+  margin-left: 0em; }
+
+input[type="submit"], input[type="button"], input[type="reset"], button {
+  text-shadow: none;
+  background: none; }
+
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover {
+  text-shadow: none;
+  background: none; }
+
+span.highlight {
+  color: #ff2100;
+  background: none; }
+
+.container .carousel-caption h1 a {
+  color: #fff; }
+
+.sitemap h3 a {
+  font-size: 20px; }
+
+.sitemap ul {
+  margin-left: 40px; }
+
+.sinaxarTitle {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.fixed {
+  display: block;
+  height: 123px; }
+
+/* cancel styles for search results */
+.article .results-grid {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat scroll 0 0 #fff;
+  /*
+  border-color: #d7d7d7;
+  */
+  border-image: none;
+  border-style: none;
+  border-width: 0 0px; }
+
+.article .results-row td {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+  border-color: none;
+  border-image: none;
+  border-style: none;
+  /*
+  border-width: 0px;
+  padding: 5px 10px;
+  */ }
+
+.article .results-row.hover td {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+  border-color: none;
+  border-image: none;
+  border-style: none;
+  /*
+  border-width: 0px;
+  padding: 5px 10px;
+  */ }
+
+.article .results-row.alt td {
+  background: none; }
+
+.article .taglib-search-iterator td {
+  padding: 0px; }
+
+.portlet-image-gallery-display .image-thumbnail {
+  border: none;
+  float: left;
+  height: 135px;
+  margin: 20px 4px 0;
+  padding: 5px 5px 0;
+  text-align: center;
+  text-decoration: none;
+  width: 150px; }
+
+.content-box .level-2 .list-group-item {
+  font-size: 14px !important;
+  font-weight: normal;
+  padding-left: 20px; }
+
+/* caption la galerie foto */
+.aui-image-viewer-content .yui3-widget-ft {
+  padding: 15px 10px 10px; }
+
+.taglib-page-iterator {
+  padding-top: 45px; }
+

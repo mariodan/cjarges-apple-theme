@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.1.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_1_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.1.2+</version>
+	</compatibility>
+	<theme id="CjArges-Apple" name="CjArges Apple">
+		<settings>
+        	<setting key="header-type" value="detailed" />
+        	<setting key="portlet-setup-show-borders-default" value="false" />
+			<setting key="header-article-id" value="HEADER" />
+			<setting key="sidebar-article-id" value="SIDEBAR" />
+			<setting key="footer-article-id" value="FOOTER" />
+    	</settings>
+	</theme>
+	<theme id="CjArges-Apple-Simple" name="CjArges Apple Simple">
+		<settings>
+        	<setting key="header-type" value="simple" />
+    	</settings>
+	</theme>
+	<theme id="CjArges-Apple-Organigrama" name="CjArges Apple Organigrama">
+		<settings>
+        	<setting key="template-type" value="organigrama" />
+    	</settings>
+	</theme>
+</look-and-feel>

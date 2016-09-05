@@ -1,0 +1,118 @@
+#*
+This file allows you to override and define new Velocity variables.
+ORG_ID NEW SITE= 10864
+OLD ORG_ID = 11651
+*#
+
+
+#set($ORG_ID = 10864)
+
+
+#set ($headerArticleId = $theme_settings.getProperty("header-article-id"))
+#set ($footerArticleId = $theme_settings.getProperty("footer-article-id"))
+#set ($headerContent = $journalContentUtil.getContent($group_id, $headerArticleId,null, "$locale", $theme_display))
+#set ($footerContent = $journalContentUtil.getContent($group_id, $footerArticleId,null, "$locale", $theme_display))
+
+
+
+#set($user_Id = $getterUtil.getLong($request.get("theme-display").get("user-id")))
+#set($organizationLocalServiceUtil=$portal.getClass().forName("com.liferay.portal.service.OrganizationLocalServiceUtil").newInstance())
+
+
+#set($isParentOrganization = 0)
+#set($organizationID = 0)
+#set($organizationID = $organizationLocalServiceUtil.getOrganizationId($company_id,$site_name)) 
+
+
+#if($validator.isNotNull($organizationID))
+	#if($organizationID == 0)
+		#set($organizationID = $ORG_ID)
+		#set($isParentOrganization = 1)
+	#else
+		#if($organizationID == $ORG_ID)
+			#set($isParentOrganization = 1)
+		#end
+	#end
+#else
+	#set($organizationID = $ORG_ID)
+	#set($isParentOrganization = 1)
+#end
+
+
+
+#set($organization = $organizationLocalServiceUtil.getOrganization($organizationID)) 
+#set($orgAddress = $organization.getAddress())
+
+#set($addressLocalServiceUtil=$portal.getClass().forName("com.liferay.portal.service.AddressLocalServiceUtil").newInstance())
+#set($addressList = $addressLocalServiceUtil.getAddresses())
+
+
+#*
+Get Address
+*#
+
+#set($address = "")
+#set($zip = "")
+#set($city = "")
+#set($country = "Romania")
+
+#if($validator.isNotNull($orgAddress))
+	#set($address = $orgAddress.getStreet1())
+	#set($zip = $orgAddress.getZip())
+	#set($city = $orgAddress.getCity())
+	#set($country = $orgAddress.getCountry().getName())
+#else
+	#if($addressLocalServiceUtil.getAddressesCount() > 0)
+		#set($address = $addressList.get(0).getStreet1())
+		#set($zip = $addressList.get(0).getZip())
+		#set($city = $addressList.get(0).getCity())
+		#set($country = $addressList.get(0).getCountry().getName())
+	#end
+#end
+
+
+
+#*
+Get Phones
+*#
+
+
+#set($phoneLocalServiceUtil=$portal.getClass().forName("com.liferay.portal.service.PhoneLocalServiceUtil").newInstance())
+
+#set($phoneList = [""])
+
+#if($organizationID>0)
+	#set($phoneList = $phoneLocalServiceUtil.getPhones($company_id,"com.liferay.portal.model.Organization",$organizationID))
+#else
+	#set($phoneList = $phoneLocalServiceUtil.getPhones())
+#end
+
+
+#set($phone = "")
+#set($phone_extension = "")
+
+#set($fax = "")
+#set($fax_extension = "")
+
+
+#if($addressLocalServiceUtil.getAddressesCount() > 0)
+	#foreach($my_phone in $phoneList)
+	
+		#if($my_phone.getTypeId() == 12008)
+			#set($phone = $my_phone.getNumber())
+			#set($phone_extension = $my_phone.getExtension())
+		#elseif($my_phone.getTypeId() == 12007)
+			#set($fax = $my_phone.getNumber())
+			#set($fax_extension = $my_phone.getExtension())
+		#end	
+		
+	#end
+#end
+
+#*
+Get Email Address
+
+
+#set($emailAddressLocalServiceUtil=$portal.getClass().forName("com.liferay.portal.service.EmailAddressLocalServiceUtil").newInstance())
+#set($emailList = $emailAddressLocalServiceUtil.getEmailAddresses($company_id, "com.liferay.portal.model.Organization", $organizationID))
+*#

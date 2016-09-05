@@ -1,0 +1,57 @@
+/* cancel styles for search results */
+
+
+
+.article .results-grid {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    
+    background: none repeat scroll 0 0 #fff;
+    /*
+    border-color: #d7d7d7;
+    */
+    border-image: none;
+    border-style: none;
+    border-width: 0 0px;
+}
+
+
+.article .results-row td {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+    border-color: none;
+    border-image: none;
+    border-style: none;
+    /*
+    border-width: 0px;
+    padding: 5px 10px;
+    */
+}
+
+.article .results-row.hover td {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+    border-color: none;
+    border-image: none;
+    border-style: none;
+    /*
+    border-width: 0px;
+    padding: 5px 10px;
+    */
+}
+
+.article .results-row.alt td {
+    background: none;
+}
+
+.article .taglib-search-iterator td {
+    padding: 0px;
+}
