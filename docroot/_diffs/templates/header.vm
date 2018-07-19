@@ -18,10 +18,10 @@
 						
 					</div>
 					<div class="social_block pull-right">
-						<a href="http://ro-ro.facebook.com/CJArges" target="_blank" title="Facebook" >
+						<a href="http://ro-ro.facebook.com/CJArges" target="_blank" rel="noopener" title="Facebook" >
 							<img class="grayscale" src="$images_folder/fb_icon.png" alt="facebook" width="23" height="23">
 						</a> 
-						<a href="" target="_blank"  title="Twitter">
+						<a href="" target="_blank" rel="noopener" title="Twitter">
 							<img class="grayscale"src="$images_folder/twt_icon.png" alt="twitter" width="23" height="23">
 						</a>
 					</div>
@@ -68,7 +68,7 @@
 						<div class="navbar-collapse collapse">
 							<form role="search" class="navbar-form navbar-left">
 								<div class="form-group">
-									<input type="text" placeholder="Search" class="form-control">
+									<input type="text" placeholder="Cautare" class="form-control">
 								</div>
 							</form>
 							
@@ -92,7 +92,7 @@
             <!-- Logo Ara -->
             <div class="container">
                 <div class="pull-right logo_ara">
-                	<a href="http://www.adsoft.ro" target="_blank"><img class="grayscale" src="$images_folder/logo_ara.png" alt="Ara Software Group" title="Ara Software Group" />
+                	<a href="http://www.adsoft.ro" target="_blank" rel="noopener"><img class="grayscale" src="$images_folder/logo_ara.png" alt="Ara Software Group" title="Ara Software Group" />
                 	</a>
                 </div>
             </div>

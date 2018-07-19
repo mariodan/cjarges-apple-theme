@@ -14,21 +14,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Ara Software">
-	<meta name="description" content="Bine ati venit la Consiliul Judetean Arges. Cj Arges, Evenimente, Comunicate de presa, Institutii">
+	<meta name="description" content="Bine ati venit la Consiliul Județean Argeș. Cj Argeș, Evenimente, Comunicate de presă, Instituții">
+	
+	<meta name="theme-color" content="#0072bc">
+	<link rel="icon" sizes="108x107" href="$images_folder/logo.png">
+	<!-- reuse same icon for Safari -->
+	<link rel="apple-touch-icon" href="$images_folder/logo.png">
 	
 	<META NAME="ROBOTS" CONTENT="ALL,NOTRANSLATE"> 
-	<meta property="og:title" content="Consiliul Judetean Arges">
+	<meta property="og:title" content="Consiliul Județean Argeș">
 	<meta property="og:image" content="https://www.cjarges.ro$site_logo">
-	<meta property="og:description" content="Consiliul Judetean, Arges, Pitesti">
+	<meta property="og:description" content="Consiliul Județean, Argeș, Pitești">
 
     <!-- Bootstrap core CSS -->
 	<link href="$css_folder/bootstrap.min.css" rel="stylesheet">
 	<link href="$css_folder/font-awesome.min.css" rel="stylesheet">
 	
+	<!--
 	<script src="$javascript_folder/ie-emulation-modes-warning.js"></script>
-	
+	-->
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<!--
 	<script src="$javascript_folder/ie10-viewport-bug-workaround.js"></script>
+	-->
 	
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -49,7 +57,7 @@
 	    <link rel="stylesheet" type="text/css" href="$javascript_folder/organigrama/jquery/ui-lightness/jquery-ui-1.10.2.custom.css" />
         <link rel="stylesheet" type="text/css" href="$css_folder/organigrama/primitives.latest.css" media="screen"  />
 
-        <script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-ui-1.10.2.custom.min.js"></script>
         <script type="text/javascript" src="http://www.cjarges.ro:8080/organigrama/demo/js/primitives.min.js"></script>
 
@@ -57,7 +65,7 @@
 
 	#else
 		
-		<script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="$javascript_folder/organigrama/jquery/jquery-ui-1.10.2.custom.min.js"></script>
 	
 	#end
@@ -65,13 +73,13 @@
 	<!-- Custom styles for DateTime Picker -->
 	<link href="$css_folder/bootstrap-datetimepicker.css" rel="stylesheet">
 	
-	<script src='$javascript_folder/jquery.smartModal.js'></script>
+	<script src='$javascript_folder/jquery.smartModal.min.js'></script>
 	<script src='$javascript_folder/jquery.cookie.js'></script>
 	
 	<!-- cookie enabled site warning -->
 	<script type="text/javascript">
     	window.cookieconsent_options = {
-    	"message":"Acest site foloseste cookie-uri. Prin utilizarea si navigarea in continuare pe site-ul www.cjarges.ro, va exprimati acordul expres pentru folosirea informatilor stocate.",
+    	"message":"Acest site folosește cookie-uri. Prin utilizarea și navigarea în continuare pe site-ul www.cjarges.ro, vă exprimați acordul expres pentru folosirea informațiilor stocate.",
     	"dismiss":"Accept",
     	"learnMore":"Detalii",
     	"link":"http://www.cjarges.ro/ro/despre-cookie","theme":"light-top"};
@@ -80,9 +88,6 @@
 
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 	
-	<!-- Google Captcha -->
-	<script src='https://www.google.com/recaptcha/api.js?hl=ro'></script>
-
 </head>
 
 <body>
@@ -182,14 +187,35 @@
 		
 		$(function(){
 			$('.carousel-inner img').each(function(){
-				poz = ($('.carousel-inner').width() - realWidth($(this))) / 2;
+				
+				/*
+				carouselWidth = $('.carousel-inner').width();
+				imgWidth = realWidth($(this));
+				imgWidth = imgWidth > 0 ? imgWidth : (carouselWidth + 1);
+				
+				imgWidth = (carouselWidth - imgWidth) == 0 ? (imgWidth - 1) : imgWidth;
+				
+				console.log($(this).attr("src") + ', carWidth: ' + carouselWidth + ', imgWidth: ' + imgWidth);
+				*/
+				carouselWidth = $('.carousel-inner').width();
+				poz = (carouselWidth - (carouselWidth-1)) / 2;
 				$(this).css('left', poz + 'px');
 			});
 		});
 		
 		$(window).resize(function(){
 			$('.carousel-inner img').each(function(){
-				poz = ($('.carousel-inner').width() - realWidth($(this))) / 2;
+				/*
+				
+				imgWidth = realWidth($(this));
+				imgWidth = imgWidth > 0 ? imgWidth : (carouselWidth + 1);
+				
+				imgWidth = (carouselWidth - imgWidth) == 0 ? (imgWidth - 1) : imgWidth;
+				
+				console.log($(this).attr("src") + ', carWidth: ' + carouselWidth + ', imgWidth: ' + imgWidth);
+				*/
+				carouselWidth = $('.carousel-inner').width();
+				poz = (carouselWidth - (carouselWidth-1)) / 2;
 				$(this).css('left', poz + 'px');
 			});
 		});

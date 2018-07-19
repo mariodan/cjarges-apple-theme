@@ -15,10 +15,10 @@
 						<div class="col-md-12 col-sm-6 col-xs-6">
 							<h2>Ne găsești și aici</h2>
 							<div class="social_block">
-								<a href="https://ro-ro.facebook.com/CJArges" target="_blank" title="Facebook">
+								<a href="https://ro-ro.facebook.com/CJArges" target="_blank" rel="noopener" title="Facebook">
 									<img class="grayscale" src="$images_folder/fb_icon.png" alt="facebook">
 								</a>
-								<a href="https://twitter.com/ProARGES/status/170270417435623424" blank" title="Twitter" >
+								<a href="https://twitter.com/ProARGES/status/170270417435623424" target="_blank" rel="noopener" title="Twitter" >
 									<img class="grayscale" src="$images_folder/twt_icon.png" alt="twitter">
 								</a>
 							</div>
