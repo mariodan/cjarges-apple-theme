@@ -15,11 +15,11 @@
 						<div class="col-md-12 col-sm-6 col-xs-6">
 							<h2>Ne găsești și aici</h2>
 							<div class="social_block">
-								<a href="https://ro-ro.facebook.com/CJArges" target="_blank" rel="noopener" title="Facebook">
+								<a href="https://www.facebook.com/CJArges/" target="_blank" rel="noopener" title="Facebook">
 									<img class="grayscale" src="$images_folder/fb_icon.png" alt="facebook">
 								</a>
-								<a href="https://twitter.com/ProARGES/status/170270417435623424" target="_blank" rel="noopener" title="Twitter" >
-									<img class="grayscale" src="$images_folder/twt_icon.png" alt="twitter">
+								<a href="https://old.cjarges.ro/" target="_blank" rel="noopener" title="Site vechi" >
+									<img class="grayscale" src="$images_folder/old_cj_arges.png" alt="Site vechi">
 								</a>
 							</div>
 						</div>
@@ -69,11 +69,11 @@
 				<div class="row">
 					<div class="col-md-6">
 						<a href="/acasa">Acasă</a> | 
-						<a href="/judetul-arges">Județul Argeș</a> | 
-						<a href="/consiliul-judetean-arges">Consiliul Județean</a> | 
-						<a href="/institutii-publice-subordonate">Instituții Subordonate</a> | 
-						<a href="/servicii-online">Servicii Online</a> | 
-						<a href="/contact">Contact</a>
+						<a href="/judetul-arges" alt="Județul Argeș" title="Județul Argeș">Județul Argeș</a> | 
+						<a href="/consiliul-judetean-arges" alt="Consiliul Județean" title="Consiliul Județean">Consiliul Județean</a> | 
+						<a href="/institutii-publice-subordonate" alt="Instituții Subordonate" title="Instituții Subordonate">Instituții Subordonate</a> | 
+						<a href="/servicii-online" alt="Servicii Online" title="Servicii Online">Servicii Online</a> | 
+						<a href="/contact" alt="Contact" title="Contact">Contact</a>
 					</div>
 					<div class="col-md-6">
 						<p style="float:right">Copyright &copy; 2014 $site_name</p>
