@@ -108,6 +108,8 @@
 			</script>
 	<script type="text/javascript" src="https://cdn.userway.org/widget.js"></script>
 	
+	<!-- custom css -->
+	<link href="$css_folder/custom1.css" rel="stylesheet">
 </head>
 
 <body>

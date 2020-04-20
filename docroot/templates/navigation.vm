@@ -14,7 +14,7 @@
     	#end	
     #end
     	#if (($nav_item.hasChildren()))
-			<a href="$nav_item.getURL()" $nav_item.getTarget() class="dropdown-toggle" data-toggle="dropdown">
+			<a href="$nav_item.getURL()" $nav_item.getTarget() class="dropdown-toggle">
 				$nav_item.getName()
     			<span class="caret"></span>
     		</a>
