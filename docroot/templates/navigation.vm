@@ -20,9 +20,26 @@
     		</a>
     		<ul class="dropdown-menu" role="menu">
 	    		#foreach ($nav_child in $nav_item.getChildren())
-	    			<li class="">
-						<a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a>
-					</li>
+	    			#set( $menuItem = $nav_child.getName())
+	    			#if( $menuItem.length() > 50 )
+						#set ($smallMenuItem = $menuItem.substring(0, 50))
+						<li class="">
+							<a href="$nav_child.getURL()" $nav_child.getTarget()>$smallMenuItem ...</a>
+						</li>
+					#else
+						<li class="">
+							<a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a>
+						</li>
+					#end
+					
+					#if( $velocityCount > 9 )
+						<li class="divider"></li>
+						<li>
+							<a href="$nav_item.getURL()" $nav_item.getTarget()>Vezi mai multe</a>
+						</li>
+				        #break
+				    #end
+	    			
 	    		#end
     		</ul>
 		#else

@@ -1696,3 +1696,9 @@ footer .margin_top {
 		padding-top: 15px;
 	}
 }
+
+.dropdown-menu>li>a:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #a0a0a0
+}
