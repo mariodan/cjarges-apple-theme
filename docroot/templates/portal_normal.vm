@@ -14,7 +14,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Ara Software">
-	<meta name="description" content="Bine ati venit la Consiliul Județean Argeș. Cj Argeș, Evenimente, Comunicate de presă, Instituții">
+	<meta name="description" content="Bine ati venit la Consiliul Judetean Arges, Evenimente, Comunicate de presa, Institutii">
 	
 	<meta name="theme-color" content="#0072bc">
 	<link rel="icon" sizes="108x107" href="$images_folder/logo.png">
@@ -22,9 +22,9 @@
 	<link rel="apple-touch-icon" href="$images_folder/logo.png">
 	
 	<META NAME="ROBOTS" CONTENT="ALL,NOTRANSLATE"> 
-	<meta property="og:title" content="Consiliul Județean Argeș">
+	<meta property="og:title" content="Consiliul Judetean Arges">
 	<meta property="og:image" content="https://www.cjarges.ro$site_logo">
-	<meta property="og:description" content="Consiliul Județean, Argeș, Pitești">
+	<meta property="og:description" content="Consiliul Judetean Arges, Pitesti">
 
     <!-- Bootstrap core CSS -->
 	<link href="$css_folder/bootstrap.min.css" rel="stylesheet">
@@ -79,7 +79,7 @@
 	<!-- cookie enabled site warning -->
 	<script type="text/javascript">
     	window.cookieconsent_options = {
-    	"message":"Acest site folosește cookie-uri. Prin utilizarea și navigarea în continuare pe site-ul www.cjarges.ro, vă exprimați acordul expres pentru folosirea informațiilor stocate.",
+    	"message":"Acest site foloseÈ™te cookie-uri. Prin utilizarea È™i navigarea Ã®n continuare pe site-ul www.cjarges.ro, vÄƒ exprimaÈ›i acordul expres pentru folosirea informaÈ›iilor stocate.",
     	"dismiss":"Accept",
     	"learnMore":"Detalii",
     	"link":"http://www.cjarges.ro/ro/despre-cookie","theme":"light-top"};

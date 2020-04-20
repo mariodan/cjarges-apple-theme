@@ -64,6 +64,20 @@
 				</div>
 			</div>
 		</div>
+		
+		
+		<!-- BOTTOM_BLOCK_FOOTER_CONTENT -->
+		<div class="container-fluid grey_content">
+			<div class="container">
+				<div class="row">
+					#set ($journalArticleLocalService = $serviceLocator.findService("com.liferay.portlet.journal.service.JournalArticleLocalService"))
+					#set ($footerContent = $journalArticleLocalService.getLatestArticle($theme_display.getScopeGroupId(), "BOTTOM_BLOCK_FOOTER_CONTENT"))
+					$journalContentUtil.getContent(10865, $footerContent.getArticleId(), "", "$locale", $theme_display)
+				</div>
+			</div>
+		</div>
+		<!-- end BOTTOM_BLOCK_FOOTER_CONTENT -->
+		
 		<div class="container-fluid white_content bottom_footer">
 			<div class="container">
 				<div class="row">
